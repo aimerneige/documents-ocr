@@ -3,4 +3,5 @@ __pycache__
 *.pyc
 src/images/*
 src/result/*
+src/csv/*
 *.pdf
