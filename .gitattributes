@@ -1,0 +1,7 @@
+*   text=auto
+
+*.py	text	eof=lf
+*.md    text    eof=lf
+*.txt   text    eof=lf
+*.png   binary
+*.jpg   binary
