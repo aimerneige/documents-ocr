@@ -20,7 +20,6 @@ if __name__ == '__main__':
     ocr.set_probability("true")
 
     images_path = os.getcwd() + "/images"
-    index = 1
     for filename in os.listdir(images_path):
         image_path = os.path.join(images_path, filename)
         print('start to recognize ', image_path)
@@ -30,5 +29,4 @@ if __name__ == '__main__':
         with open(file_path, 'w') as f:
             f.write(json.dumps(result, ensure_ascii=False))
         print(image_path, 'recognized successfully')
-        index += 1
     print('all done')
