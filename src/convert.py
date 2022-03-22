@@ -8,14 +8,26 @@
 # License: MIT
 
 
+import sys
 from pdf2image import convert_from_path
 
 if __name__ == '__main__':
+    args = sys.argv
+    if len(args) < 2:
+        print("Usage: python3 convert.py [pdf file path] [start index]")
+        print("Note: you can ignore start index which will be 1 on default")
+        exit()
 
-    images = convert_from_path('example.pdf')
+    pdf_path = args[1]
+
+    start_index = 1
+    if len(args) == 3:
+        start_index = int(args[2])
+
+    images = convert_from_path(pdf_path)
     print('pdf converted to images')
 
-    index = 1
+    index = start_index
     for image in images:
         file_name = 'page_' + str(index).zfill(3) + '.png'
         file_path = './images/' + file_name
