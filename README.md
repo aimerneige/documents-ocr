@@ -1,5 +1,15 @@
 # documents ocr
 
+## Convert pdf to images
+
+Run `src/convert.py`
+
+```bash
+python src/convert.py
+```
+
+## Use baidu
+
 Put your key in `src/key.py`.
 
 ```py
@@ -13,6 +23,6 @@ Edit `src/main.py`.
 
 Run `main.py`.
 
-```python
+```bash
 python src/main.py
 ```
